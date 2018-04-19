@@ -1,0 +1,19 @@
+<html>
+
+<head>
+<link rel=stylesheet type=text/css href="{{ url_for('static', filename='styles.css') }}">
+	</head>
+
+ <body>
+
+<h1>GIGZAG</h1>
+<h3>List of all actors</h3>
+
+{% for actor in actors %}
+
+<p>{{actor.name}}</p>
+
+{% endfor %}
+
+</body>
+</html>
