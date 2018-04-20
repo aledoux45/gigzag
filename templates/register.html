@@ -7,15 +7,17 @@
  <body>
 
 <h1>GIGZAG</h1>
-<h3>Login</h3>
+<h3>New User</h3>
 
 <p class="error">{{error}}</p>
 
 <form method="post">
     {{ form.csrf_token }}
     <p>{{ form.username.label }} {{ form.username(size=20) }}</p>
+    <p>{{ form.email.label }} {{ form.email(size=20) }}</p>
     <p>{{ form.password.label }} {{ form.password(size=20) }}</p>
-    <input type='submit' value='OK'>
+    <p>{{ form.password2.label }} {{ form.password2(size=20) }}</p>
+    <p>{{ form.submit }}</p>
 </form>
 
 </body>

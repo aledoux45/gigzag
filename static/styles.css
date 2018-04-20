@@ -6,10 +6,11 @@
     background-size: cover;
 }*/
 body            { background-image: url('/static/img/actingschool.jpg') ; background-size:cover; }
-h1              { border-bottom: 2px solid #eee; }
+/*h1              { border-bottom: 2px solid #eee; }*/
 
 a, h1, h3, p       { color: #FFFFFF; }
 h1, h3        { font-family: "Arial Black", Gadget, sans-serif; margin: auto; }
 
-.center {text-align: center; margin: auto;}
-#login { width: 300px; margin: 0 auto;}
+.error { color: #ff0000; }
+.center {text-align: center; margin: auto; }
+#login { width: 300px; margin: 0 auto; }
