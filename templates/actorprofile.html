@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cover - Free Bulma template</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <!-- Bulma Version 0.6.2-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css" integrity="sha256-2k1KVsNPRXxZOsXQ8aqcZ9GOOwmJTMoOB5o5Qp1d6/s=" crossorigin="anonymous" />
+  <style type="text/css">
+    html,body {
+      font-family: 'Open Sans';
+    }
+  </style>
+</head>
+<body>
+  <!-- START NAV -->
+  <nav class="navbar">
+    <div class="container">
+      <div class="navbar-brand">
+        <a class="navbar-item" href="/">
+          <img src="{{ url_for('static', filename='images/gigzaglogo.jpg') }}" alt="Logo">
+          <p class="has-text-grey">Gigzag</p>
+        </a>
+        <span class="navbar-burger burger" data-target="navbarMenu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
+      </div>
+      <div id="navbarMenu" class="navbar-menu">
+        <div class="navbar-end">
+          <div class="tabs is-right">
+            <ul>
+              <li><a href="/jobswall">Wall</a></li>
+              <li class="is-active"><a href="/actor">Profile</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <!-- END NAV -->
+  <br>
+  <!-- START PROFILE -->
+  <div class="container">
+    <div class="columns">
+      <div class="column is-5">
+        <figure class="image is-4by2">
+          <img src="{{ url_for('static', filename='images/andrey.jpg') }}" alt="Description">
+        </figure>
+      </div>
+      <div class="column is-6 is-offset-1">
+        <h1 class="title is-2">
+          Andrey Marioutine
+        </h1>
+        <h2 class="subtitle is-5">
+          I'm like, a really really good actor. Believe me.
+        </h2>
+        <table class="table is-4 is-striped">
+          <tbody>
+            <tr>
+              <th>Email</th>
+              <td>andrey.m.54@gmail.com</td>
+            </tr>
+            <tr>
+              <th>Phone</th>
+              <td>718-982-0919</td>
+            </tr>
+            <tr>
+              <th>Username</th>
+              <td>andreymarioutine</td>
+            </tr>
+            <tr>
+              <th>Union</th>
+              <td>AFFAP</td>
+            </tr>
+          </tbody>
+
+        </table>
+      </div>
+    </div>
+  </div>
+  <!-- END PROFILE -->
+  <br>
+  <!-- START SKILLS -->
+  <div class="container">
+    <div class="tile is-ancestor">
+        <div class="tile is-vertical is-8">
+          <div class="tile">
+            <div class="tile is-parent is-vertical">
+              <article class="tile is-child box">
+                I know how to do this 
+              </article>
+              <article class="tile is-child box">
+                  I know how to do that
+              </article>
+            </div>
+            <div class="tile is-parent">
+              <article class="tile is-child box">
+                  I know how to do this and that
+              </article>
+            </div>
+          </div>
+          <div class="tile is-parent">
+            <article class="tile is-child box">
+                I am super awesome at this
+            </article>
+          </div>
+        </div>
+        <div class="tile is-parent">
+          <article class="tile is-child box">
+            Measurements
+          </article>
+        </div>
+      </div>
+  </div>
+  <!-- END SKILLS -->
+  <br>
+
+  <!-- FOOTER EDIT PROFILE -->
+  <div class="hero-foot">
+    <div class="container">
+      <div class="content has-text-centered">
+        <p>
+          <a href="/editprofile">Edit Profile</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

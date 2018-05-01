@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cover - Free Bulma template</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <!-- Bulma Version 0.6.2-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css" integrity="sha256-2k1KVsNPRXxZOsXQ8aqcZ9GOOwmJTMoOB5o5Qp1d6/s=" crossorigin="anonymous" />
+  <style type="text/css">
+    html,body {
+      font-family: 'Open Sans';
+    }
+  </style>
+</head>
+<body>
+  <!-- START NAV -->
+  <nav class="navbar">
+    <div class="container">
+      <div class="navbar-brand">
+        <a class="navbar-item" href="/">
+          <img src="{{ url_for('static', filename='images/gigzaglogo.jpg') }}" alt="Logo">
+          <p class="has-text-grey">Gigzag</p>
+        </a>
+        <span class="navbar-burger burger" data-target="navbarMenu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
+      </div>
+      <div id="navbarMenu" class="navbar-menu">
+        <div class="navbar-end">
+          <div class="tabs is-right">
+            <ul>
+              <li class="is-active"><a href="/jobswall">Wall</a></li>
+              <li><a href="/actor">Profile</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <!-- END NAV -->
+  <br>
+  <div class="container has-text-centered">
+    <!-- START ARTICLE FEED -->
+    <section class="articles">
+      <div class="column is-8 is-offset-2">
+        <!-- START ARTICLE -->
+        <div class="card article">
+          <div class="card-content">
+            <div class="media">
+              <div class="media-center">
+                <img src="{{ url_for('static', filename='images/actingschool.jpg') }}" class="author-image" alt="Placeholder image">
+              </div>
+              <div class="media-content has-text-centered">
+                <p class="title article-title">Need extra to play in movie</p>
+              </div>
+            </div>
+            <div class="content article-body">
+              <p>Non arcu risus quis varius quam quisque. Dictum varius duis at consectetur lorem. Posuere sollicitudin aliquam ultrices sagittis orci a scelerisque purus semper. </p>
+              <p>Metus aliquam eleifend mi in nulla posuere sollicitudin aliquam ultrices. In hac habitasse platea dictumst vestibulum rhoncus est pellentesque elit. Accumsan lacus vel facilisis volutpat. Non sodales neque sodales ut etiam. Est pellentesque elit ullamcorper dignissim cras tincidunt lobortis feugiat vivamus.</p>
+              <h3 class="has-text-centered">Feugiat sed lectus vestibulum mattis.</h3>
+              <p> Molestie ac feugiat sed lectus vestibulum. Feugiat sed lectus vestibulum mattis. Volutpat diam ut venenatis tellus in metus vulputate. Feugiat in fermentum posuere urna nec. Pharetra convallis posuere morbi leo urna molestie at. Accumsan lacus vel facilisis volutpat est velit egestas. Fermentum leo vel orci porta. Faucibus interdum posuere lorem ipsum.
+              </p>
+              <p class="has-text-centered">
+                <a class="button is-medium is-danger is-outlined">
+                  Apply
+                </a>
+              </p>
+            </div>
+          </div>
+        </div>
+        <br>
+        <!-- END ARTICLE -->
+        <!-- START ARTICLE -->
+        <article class="message">
+          <div class="message-header">
+            <p>Some other job</p>
+            <p class="has-text-centered">
+              <a class="button is-medium is-danger is-outlined">
+                Apply
+              </a>
+            </p>
+          </div>
+          <div class="message-body">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. <strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum <a>felis venenatis</a> efficitur. Aenean ac <em>eleifend lacus</em>, in mollis lectus. Donec sodales, arcu et sollicitudin porttitor, tortor urna tempor ligula, id porttitor mi magna a neque. Donec dui urna, vehicula et sem eget, facilisis sodales sem.
+          </div>
+        </article>
+        <!-- END ARTICLE -->
+        <!-- START ARTICLE -->
+        <article class="message is-info">
+            <div class="message-header">
+              <p>Some other job</p>
+            </div>
+            <div class="message-body">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. <strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum <a>felis venenatis</a> efficitur. Aenean ac <em>eleifend lacus</em>, in mollis lectus. Donec sodales, arcu et sollicitudin porttitor, tortor urna tempor ligula, id porttitor mi magna a neque. Donec dui urna, vehicula et sem eget, facilisis sodales sem.
+              <p class="has-text-centered">
+                <a class="button is-medium is-danger is-outlined">
+                  Apply
+                </a>
+              </p>
+            </div>
+          </article>
+        <!-- END ARTICLE -->
+      </div>
+    </section>
+    <!-- END ARTICLE FEED -->
+  </div>
+</body>
+</html>

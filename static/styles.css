@@ -1,7 +1,5 @@
-body            { background-image: url('/static/images/actingschool.jpg') ; background-size:cover; }
-a, h1, h3, p       { color: #FFFFFF; }
-h1, h3        { font-family: "Arial Black", Gadget, sans-serif; margin: auto; }
+/* body            { background-image: url('/static/images/actingschool.jpg'); 
+    background-size:cover; } */
+h1  { font-family: "Arial Black", Gadget, sans-serif; 
+    margin: auto;}
 
-.error { color: #ff0000; }
-.center {text-align: center; margin: auto; }
-#login { width: 300px; margin: 0 auto; }

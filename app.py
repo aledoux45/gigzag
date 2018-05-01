@@ -7,7 +7,7 @@ import os
 
 ###### START FLASK APP AND CONNECT TO DATABASE
 app = Flask(__name__)
-engine = create_engine('sqlite:///restaurantmenu.db')
+engine = create_engine('sqlite:///actors.db')
 Base.metadata.bind = engine
 DBSession = sessionmaker(bind=engine)
 session = DBSession()
@@ -15,19 +15,32 @@ session = DBSession()
 
 @app.route('/')
 def home():
-    return render_template('indexbulma.html', error="")
+    return render_template('home.html')
+
+@app.route('/login', methods=['GET', 'POST'])
+def login():
+    return render_template('login.html')
 
 
-@app.route('/user/<username>/', methods=['GET', 'POST'])
-def show_user_profile(username):
-    return render_template('userprofile.html', username=username)
+############### ACTOR PAGE
+@app.route('/actor/', methods=['GET', 'POST'])
+def show_actor_profile():
+    return render_template('actorprofile.html')
+
+
+@app.route('/jobswall/', methods=['GET', 'POST'])
+def show_jobs_wall():
+    return render_template('jobswall.html')
 
 
 ############### DIRECTOR SEARCH PAGE
-@app.route('/search/', methods=['GET', 'POST'])
-def show_all_actors():
-    # actors = User.query.all()
-    return render_template('search.html')
+@app.route('/postgig/', methods=['GET', 'POST'])
+def post_gig():
+    return render_template('postgig.html')
+
+@app.route('/searchactors/')
+def search_actors():
+    return render_template('searchactors.html')
 
 
 if __name__ == "__main__":
