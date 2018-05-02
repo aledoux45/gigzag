@@ -47,12 +47,12 @@
   <!-- START PROFILE -->
   <div class="container">
     <div class="columns">
-      <div class="column is-5">
-        <figure class="image is-4by2">
-          <img src="{{ url_for('static', filename='images/andrey.jpg') }}" alt="Description">
+      <div class="column is-4">
+        <figure class="image">
+          <img src="{{ url_for('static', filename='images/andrey.jpg') }}" alt="Description" height="64" width="64">
         </figure>
       </div>
-      <div class="column is-6 is-offset-1">
+      <div class="column is-7">
         <h1 class="title is-2">
           Andrey Marioutine
         </h1>
@@ -88,38 +88,45 @@
   <!-- START SKILLS -->
   <div class="container">
     <div class="tile is-ancestor">
-        <div class="tile is-vertical is-8">
-          <div class="tile">
-            <div class="tile is-parent is-vertical">
-              <article class="tile is-child box">
-                I know how to do this 
-              </article>
-              <article class="tile is-child box">
-                  I know how to do that
-              </article>
-            </div>
-            <div class="tile is-parent">
-              <article class="tile is-child box">
-                  I know how to do this and that
-              </article>
-            </div>
+      <div class="tile is-vertical is-8">
+        <div class="tile">
+          <div class="tile is-parent is-vertical">
+            <a href="/skills/language" class="tile is-child notification is-primary is-bold">
+              <p class="subtitle">Language Skills...</p>
+            </a>
+            <a href="/skills/sport" class="tile is-child notification is-warning is-bold">
+              <p class="subtitle">Sport Skills...</p>
+            </a>
           </div>
           <div class="tile is-parent">
-            <article class="tile is-child box">
-                I am super awesome at this
-            </article>
+            <a href="/skills/acting" class="tile is-child notification is-info is-bold">
+              <p class="subtitle">Acting Skills...</p>
+            </a>
           </div>
         </div>
         <div class="tile is-parent">
-          <article class="tile is-child box">
-            Measurements
-          </article>
+          <a href="/skills/other" class="tile is-child notification is-danger is-bold">
+            <p class="subtitle">Other Skills...</p>
+          </a>
+        </div>
+        <div class="tile is-parent">
+          <a href="/skills/other" class="tile is-child notification is-link is-bold">
+            <p class="subtitle">Acting Experience...</p>
+          </a>
         </div>
       </div>
+      <div class="tile is-parent">
+        <a href="/skills/measurements" class="tile is-child notification is-success is-bold">
+          <p class="subtitle">Measurements...</p>
+          <figure class="avatar">
+            <img src="{{ url_for('static', filename='images/bonhomme.jpg') }}" class="is-fullheight">
+          </figure> 
+        </a>
+      </div>
+    </div>
   </div>
   <!-- END SKILLS -->
   <br>
-
   <!-- FOOTER EDIT PROFILE -->
   <div class="hero-foot">
     <div class="container">
