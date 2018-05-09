@@ -11,10 +11,10 @@
 <body>
   <section class="hero is-fullheight">
     <div class="hero-body">
-      <div class="container has-text-centered">
+      <div class="container">
         <div class="column is-4 is-offset-4">
           <div class="box">
-            <figure class="avatar">
+            <figure class="avatar has-text-centered">
               <img src="{{ url_for('static', filename='images/gigzaglogo.jpg') }}" height="128" width="128">
             </figure> 
             <form action="{{ url_for('login')}}" method = 'post'>
@@ -43,7 +43,7 @@
                   <input type="checkbox"> Football
                 </label>
               </div>
-              <a href="#" class="button is-primary is-medium is-fullwidth">Edit sport skills</a>
+              <a href="/actor" class="button is-primary is-medium is-fullwidth">Done</a>
             </form>
           </div>
         </div>

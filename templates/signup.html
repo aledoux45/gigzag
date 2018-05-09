@@ -11,10 +11,10 @@
 <body>
   <section class="hero is-fullheight">
     <div class="hero-body">
-      <div class="container has-text-centered">
+      <div class="container">
         <div class="column is-4 is-offset-4">
           <div class="box">
-            <figure class="avatar">
+            <figure class="avatar has-text-centered">
               <img src="{{ url_for('static', filename='images/gigzaglogo.jpg') }}" height="128" width="128">
             </figure>
             <form action="{{ url_for('signup')}}" method = 'post'>
@@ -28,6 +28,34 @@
                   <input class="input" type="text" placeholder="Last Name">
                 </p>
               </div>
+              <div class="field">
+                <p class="control">
+                  <input class="input" type="text" placeholder="Username">
+                </p>
+              </div>
+              <div class="field">
+                <p class="control">
+                  <input class="input" type="text" placeholder="Phone">
+                </p>
+              </div>
+              <div class="field is-horizontal">
+                <div class="field-label is-normal is-left">
+                  <label class="label">Union affiliation</label>
+                </div>
+                <div class="control has-icons-left">
+                  <span class="select">
+                    <select>
+                      <option>No affiliation</option>
+                      <option>AFFP Union</option>
+                      <option>BLABLA Union</option>
+                    </select>
+                  </span>
+                  <span class="icon is-small is-left">
+                      <i class="fas fa-users"></i>
+                    </span>
+                </div>
+              </div>
+
               <div class="field">
                 <p class="control has-icons-left has-icons-right">
                   <input class="input" type="email" placeholder="Email">

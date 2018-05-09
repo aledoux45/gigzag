@@ -1,22 +1,9 @@
 from flask import Flask, flash, render_template, request, redirect, url_for, abort
-# from flask_mongoengine import MongoEngine
-# from flask_security import Security, MongoEngineUserDatastore, UserMixin, RoleMixin, login_required
-# from flask_login import login_user
 
-# from sqlalchemy import create_engine
-# from sqlalchemy.orm import sessionmaker
-# from database_setup import Base, Actor
-
-# import os
-
-###### START FLASK APP AND CONNECT TO DATABASE
 app = Flask(__name__)
-# engine = create_engine('sqlite:///actors.db')
-# Base.metadata.bind = engine
-# DBSession = sessionmaker(bind=engine)
-# session = DBSession()
 
 
+############### HOME PAGE
 @app.route('/')
 def home():
     return render_template('home.html')
@@ -29,7 +16,8 @@ def login():
 def signup():
     return render_template('signup.html')
 
-############### ACTOR PAGE
+
+############### ACTING PAGE
 @app.route('/actor/', methods=['GET', 'POST'])
 def show_actor_profile():
     return render_template('actorprofile.html')
@@ -58,7 +46,11 @@ def skills_measurements():
 def skills_other():
     return render_template('skills_other.html')
 
-############### DIRECTOR SEARCH PAGE
+@app.route('/skills/experience/', methods=['GET', 'POST'])
+def skills_experience():
+    return render_template('skills_experience.html')
+
+############### CASTING PAGE
 @app.route('/postjobs/', methods=['GET', 'POST'])
 def post_gig():
     return render_template('postjobs.html')
