@@ -17,48 +17,35 @@
             <figure class="avatar has-text-centered">
               <img src="{{ url_for('static', filename='images/gigzaglogo.jpg') }}" height="128" width="128">
             </figure>
-            <form action="{{ url_for('signup')}}" method = 'post'>
+            <form action="{{ url_for('register')}}" method = 'post'>
               <div class="field">
                 <p class="control">
-                  <input class="input" type="text" placeholder="First Name">
+                  <input class="input" type="text" name="firstname" placeholder="First Name">
                 </p>
               </div>
               <div class="field">
                 <p class="control">
-                  <input class="input" type="text" placeholder="Last Name">
+                  <input class="input" type="text" name="lastname" placeholder="Last Name">
                 </p>
               </div>
               <div class="field">
                 <p class="control">
-                  <input class="input" type="text" placeholder="Username">
+                  <input class="input" type="text" name="username" placeholder="Username">
                 </p>
               </div>
               <div class="field">
                 <p class="control">
-                  <input class="input" type="text" placeholder="Phone">
+                  <input class="input" type="text" name="phone" placeholder="Phone">
                 </p>
               </div>
-              <div class="field is-horizontal">
-                <div class="field-label is-normal is-left">
-                  <label class="label">Union affiliation</label>
-                </div>
-                <div class="control has-icons-left">
-                  <span class="select">
-                    <select>
-                      <option>No affiliation</option>
-                      <option>AFFP Union</option>
-                      <option>BLABLA Union</option>
-                    </select>
-                  </span>
-                  <span class="icon is-small is-left">
-                      <i class="fas fa-users"></i>
-                    </span>
-                </div>
+              <div class="field">
+                <p class="control">
+                  <input class="input" type="text" name="union" placeholder="Union">
+                </p>
               </div>
-
               <div class="field">
                 <p class="control has-icons-left has-icons-right">
-                  <input class="input" type="email" placeholder="Email">
+                  <input class="input" type="email" name="email" placeholder="Email">
                   <span class="icon is-small is-left">
                     <i class="fas fa-envelope"></i>
                   </span>
@@ -66,7 +53,7 @@
               </div>
               <div class="field">
                 <p class="control has-icons-left">
-                  <input class="input" type="password" placeholder="Password">
+                  <input class="input" type="password" name="password" placeholder="Password">
                   <span class="icon is-small is-left">
                     <i class="fas fa-lock"></i>
                   </span>
