@@ -5,16 +5,18 @@ from wtforms import StringField, PasswordField
 from wtforms.validators import Email, Length, InputRequired
 from werkzeug.security import generate_password_hash, check_password_hash
 from flask_login import LoginManager, UserMixin, login_user, login_required, logout_user, current_user
+import config
+import sys
 
 app = Flask(__name__)
 
-app.config['MONGODB_SETTINGS'] = {
-    'db': 'gigzag_users',
-    'host': 'mongodb://yoshmongo:gigzag123@ds241570.mlab.com:41570/gigzag_users'
-}
+# app.config['MONGODB_SETTINGS'] = {
+#     'db': 'gigzag_users',
+#     'host': 'mongodb://heroku_99gvrpkn:1ten6nau3lcjjg6j8qkcfden2a@ds139960.mlab.com:39960/heroku_99gvrpkn'
+# }
 
 db = MongoEngine(app)
-app.config['SECRET_KEY'] = 'somethingSUPERsecret123' # to be changed
+# app.config['SECRET_KEY'] = 'somethingSUPERsecret123' # to be changed
 login_manager = LoginManager()
 login_manager.init_app(app)
 login_manager.login_view = 'login'
@@ -126,4 +128,16 @@ def search_actors():
 
 
 if __name__ == "__main__":
-    app.run(host='0.0.0.0', port=8080, debug=True)
+    env = sys.argv[1] if len(sys.argv) > 2 else 'dev'
+    
+    if env == 'dev':
+        app.config = config.DevelopmentConfig
+    elif env == 'test':
+        app.config = config.TestConfig
+    elif env == 'prod':
+        app.config = config.ProductionConfig
+    else:
+        raise ValueError('Invalid environment name')
+
+    app.run(host='0.0.0.0', port=8080)
+
