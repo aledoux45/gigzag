@@ -7,6 +7,7 @@ from werkzeug.security import generate_password_hash, check_password_hash
 from flask_login import LoginManager, UserMixin, login_user, login_required, logout_user, current_user
 import config
 import sys
+from os import environ
 
 app = Flask(__name__)
 
@@ -136,6 +137,6 @@ if __name__ == "__main__":
     app.config['MONGODB_DB'] = config.Config.MONGODB_DB
     app.config['SECRET_KEY'] = config.Config.SECRET_KEY
 
-    app.run(host='0.0.0.0', debug=True)
+    app.run(host='0.0.0.0', port=environ.get("PORT", 5000), debug=True)
     # app.run(host='0.0.0.0', port=8080, debug=True)
 
