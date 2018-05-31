@@ -136,6 +136,6 @@ if __name__ == "__main__":
     app.config['MONGODB_DB'] = config.Config.MONGODB_DB
     app.config['SECRET_KEY'] = config.Config.SECRET_KEY
 
-
-    app.run(host='0.0.0.0', port=8080, debug=True)
+    app.run(debug=True)
+    # app.run(host='0.0.0.0', port=8080, debug=True)
 
