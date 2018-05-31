@@ -25,12 +25,12 @@ def load_user(user_id):
     return User.objects(pk=user_id).first()
 
 class RegForm(FlaskForm):
-    firstname = StringField('firstname',  validators=[InputRequired(), Length(max=100)])
-    lastname = StringField('lastname',  validators=[InputRequired(), Length(max=100)])
-    username = StringField('username',  validators=[InputRequired(), Length(min=8, max=25)])
-    phone = StringField('phone',  validators=[InputRequired(), Length(10)])
-    union = StringField('union',  validators=[InputRequired(), Length(max=100)])
-    email = StringField('email',  validators=[InputRequired(), Email(message='Invalid email'), Length(max=30)])
+    firstname = StringField('firstname', validators=[InputRequired(), Length(max=100)])
+    lastname = StringField('lastname', validators=[InputRequired(), Length(max=100)])
+    username = StringField('username', validators=[InputRequired(), Length(min=8, max=25)])
+    phone = StringField('phone', validators=[InputRequired(), Length(10)])
+    union = StringField('union', validators=[InputRequired(), Length(max=100)])
+    email = StringField('email', validators=[InputRequired(), Email(message='Invalid email'), Length(max=30)])
     password = PasswordField('password', validators=[InputRequired(), Length(min=8, max=25)])
 
 
@@ -122,16 +122,20 @@ def search_actors():
 
 
 if __name__ == "__main__":
-    env = sys.argv[1] if len(sys.argv) > 2 else 'dev'
+    # env = sys.argv[1] if len(sys.argv) > 2 else 'dev'
+    # if env == 'dev':
+    #     app.config = config.DevelopmentConfig
+    # elif env == 'test':
+    #     app.config = config.TestConfig
+    # elif env == 'prod':
+    #     app.config = config.ProductionConfig
+    # else:
+    #     raise ValueError('Invalid environment name')
     
-    if env == 'dev':
-        app.config = config.DevelopmentConfig
-    elif env == 'test':
-        app.config = config.TestConfig
-    elif env == 'prod':
-        app.config = config.ProductionConfig
-    else:
-        raise ValueError('Invalid environment name')
+    app.config['MONGODB_HOST'] = config.Config.MONGODB_HOST
+    app.config['MONGODB_DB'] = config.Config.MONGODB_DB
+    app.config['SECRET_KEY'] = config.Config.SECRET_KEY
 
-    app.run(host='0.0.0.0', port=8080)
+
+    app.run(host='0.0.0.0', port=8080, debug=True)
 
