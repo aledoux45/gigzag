@@ -10,13 +10,7 @@ import sys
 
 app = Flask(__name__)
 
-# app.config['MONGODB_SETTINGS'] = {
-#     'db': 'gigzag_users',
-#     'host': 'mongodb://heroku_99gvrpkn:1ten6nau3lcjjg6j8qkcfden2a@ds139960.mlab.com:39960/heroku_99gvrpkn'
-# }
-
 db = MongoEngine(app)
-# app.config['SECRET_KEY'] = 'somethingSUPERsecret123' # to be changed
 login_manager = LoginManager()
 login_manager.init_app(app)
 login_manager.login_view = 'login'
